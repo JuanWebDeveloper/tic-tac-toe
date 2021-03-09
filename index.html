@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe Game</title>
+    <link rel="shortcut icon" href="./images/icon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+    <div class="selectBox">
+        <h1>Tic Tac Toe</h1>
+
+        <h2 class="title">What team do you want to play for?</h2>
+        <div class="options">
+            <button class="playerX">Player <i class="fas fa-times"></i></button>
+            <button class="playerO">Player <i class="far fa-circle"></i></button>
+        </div>
+    </div>
+
+    <div class="playBoard">
+        <div class="details">
+            <div class="players">
+                <span class="Xturn"><i class="fas fa-times"></i> Turn</span>
+                <span class="Oturn"><i class="far fa-circle"></i> Turn</span>
+                <div class="slider"></div>
+            </div>
+        </div>
+        <div class="playerArea">
+            <section>
+                <span class="box1"></span><span class="box2"></span><span class="box3"></span>
+            </section>
+            <section>
+                <span class="box4"></span><span class="box5"></span><span class="box6"></span>
+            </section>
+            <section>
+                <span class="box7"></span><span class="box8"></span><span class="box9"></span>
+            </section>
+        </div>
+    </div>
+
+    <div class="resultBox">
+        <div class="wonText"></div>
+        <div class="btn">
+            <button>Replay</button>
+        </div>
+    </div>
+
+    <script src="./script/app.js"></script>
+</body>
+</html>

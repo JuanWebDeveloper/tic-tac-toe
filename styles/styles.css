@@ -1,0 +1,226 @@
+body {
+    background: #2254f8;
+    font-family: 'Raleway', sans-serif;
+}
+
+.selectBox, .playBoard, .resultBox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all .3s ease-in;
+}
+
+.selectBox {
+    position: absolute;
+    max-width: 330px;
+    width: 100%;
+    padding: 20px 25px 25px;
+    border-radius: 10px;
+    background: #f2f2f2;
+}
+
+.selectBox.hide {
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.9);
+}
+
+.selectBox h1 {
+    font-size: 25px;
+    font-weight: 700;
+    padding-bottom: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    color: #2254f8;
+}
+
+.selectBox .title {
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: capitalize;
+    margin: 20px 0;
+    color: #444;
+}
+
+.selectBox .options {
+    display: flex;
+    width: 100%;
+}
+
+.selectBox .options button {
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 0;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #2254f8;
+    transition: all .3s ease-in;
+}
+
+.selectBox .options button i {
+    font-size: 16px;
+    line-height: 18px;
+    padding-left: 5px;
+}
+
+.selectBox .options button:hover {
+    opacity: .8;
+    transform: scale(0.96);
+}
+
+.selectBox .options button.playerX {
+    margin-right: 5px;
+}
+
+.selectBox .options button.playerY {
+    margin-left: 5px;
+}
+
+.playBoard {
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.9);
+}
+
+.playBoard.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.playBoard .details {
+   background: #f2f2f2; 
+   padding: 7px;
+   border-radius: 10px;
+}
+
+.playBoard .details .players {
+    display: flex;
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.playBoard .details .players span {
+    cursor: default;
+    position: relative;
+    width: 100%;
+    font-size: 19px;
+    font-weight: 700;
+    text-align: center;
+    padding: 7px 0;
+    border-radius: 10px;
+    color: #2254f8;
+    transition: all .3s ease-in;
+    z-index: 5;
+}
+
+.playBoard .details .players .slider {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    border-radius: 10px;
+    top: 0;
+    left: 0;
+    background: #2254f8;
+    transition: all .3s ease-in;
+    z-index: 2;
+}
+
+.playBoard .details .players span:first-child {
+    color: #fff;
+}
+
+.playBoard .details .players.active span:first-child {
+    color: #2254f8;
+}
+
+.playBoard .details .players.active span:nth-child(2) {
+    color: #fff;
+}
+
+.playBoard .details .players.active .slider {
+    left: 50%;
+}
+
+.playBoard .playerArea {
+    margin-top: 20px;
+}
+
+.playBoard .playerArea section {
+    display: flex;
+}
+
+.playBoard .playerArea section span {
+    display: block;
+    width: 80px;
+    height: 80px;
+    font-size: 40px;
+    text-align: center;
+    line-height: 80px;
+    margin: 2px;
+    border-radius: 10px;
+    color: #2254f8;
+    background: #f2f2f2;
+}
+
+.resultBox {
+    max-width: 350px;
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.9);
+    background: #f2f2f2;
+}
+
+.resultBox.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.resultBox .wonText {
+    display: flex;
+    font-size: 25px;
+    font-weight: 500;
+    text-transform: capitalize;
+    justify-content: center;
+    color: #444;
+}
+
+.resultBox .wonText i {
+    font-weight: 700;
+    line-height: 32px;
+    padding: 0 5px;
+    color: #2254f8;
+}
+
+.resultBox .btn {
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.resultBox .btn button {
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 20px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #2254f8;
+    transition: all .3s ease-in;
+}
+
+.resultBox .btn button:hover {
+    transform: scale(0.96);
+}
